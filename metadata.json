@@ -1,0 +1,6 @@
+{
+  "name": "REFLECTA - Laboratorium Simulasi Pemantulan Cahaya",
+  "description": "Aplikasi edukasi fisika interaktif oleh tim ANTI GRAVITASI untuk membuktikan hukum pemantulan cahaya pada berbagai bentuk objek dan cermin lengkung.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

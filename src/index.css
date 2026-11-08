@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  body {
+    font-family: var(--font-sans);
+    background-color: #F8FAFC;
+    color: #1E293B;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Friendly optical grid with soft light blue (biru muda) */
+.bg-friendly-grid {
+  background-color: #F0F8FF;
+  background-image: radial-gradient(#BAE6FD 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+}
+
+/* Rich Futuristic Optical Ambient Background (Anti "putih polos") */
+.bg-optics-ambient {
+  background-color: #F0F4F8;
+  background-image:
+    radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(99, 102, 241, 0.18) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(245, 158, 11, 0.08) 0px, transparent 55%),
+    radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.12) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(168, 85, 247, 0.14) 0px, transparent 50%),
+    radial-gradient(#CBD5E1 0.8px, transparent 0.8px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 28px 28px;
+}
+
+/* Glassmorphic card styling with colorful border glows */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.glass-panel-cyan {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(240, 249, 255, 0.88));
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(186, 230, 253, 0.9);
+}
+
+.glass-panel-amber {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 251, 235, 0.88));
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(253, 230, 138, 0.9);
+}
+
+.glass-panel-indigo {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(238, 242, 255, 0.88));
+  backdrop-filter: blur(12px);
+  border: 1.5px solid rgba(199, 210, 254, 0.9);
+}
+
+/* Aurora gradient text */
+.text-aurora {
+  background: linear-gradient(135deg, #0284c7 0%, #4f46e5 45%, #d97706 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Soft shadows and rays */
+.soft-glow-cyan {
+  filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.5));
+}
+.soft-glow-amber {
+  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.5));
+}
+.soft-glow-pink {
+  filter: drop-shadow(0 0 8px rgba(244, 63, 94, 0.5));
+}
+.soft-glow-emerald {
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.5));
+}
+
+/* Custom slim scrollbar for control drawers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5);
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
